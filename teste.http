@@ -1,0 +1,21 @@
+### Listar todos os Gokyos
+GET http://localhost:8080/gokyo
+Accept: application/json
+
+
+### Adicionar um novo Gokyo
+POST http://localhost:8080/gokyo
+Content-Type: application/json
+
+{
+  "name": "Marlon",
+  "serie": 1,
+  "difficulty": "dev"
+}
+
+
+
+
+###Delete Gokyo By ID
+DELETE http://localhost:8080/gokyo/3
+Content-Type: application/json

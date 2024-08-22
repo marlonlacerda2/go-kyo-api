@@ -21,6 +21,6 @@ func main() {
 	router.HandleFunc("GET /status", GokyoHandlers.GetStatus)
 	router.HandleFunc("GET /gokyo", GokyoHandlers.GetGokyo)
 	router.HandleFunc("POST /gokyo", GokyoHandlers.CreateGokyo)
-
+	router.HandleFunc("DELETE /gokyo/{id}", GokyoHandlers.DeleteGokyo)
 	http.ListenAndServe(":8080", router)
 }

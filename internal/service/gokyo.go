@@ -52,3 +52,9 @@ func (s *GokyoService) CreateGokyo(gokyo *Gokyo) error {
 	gokyo.ID = int(lastInsertId)
 	return nil
 }
+
+func (s *GokyoService) DeleteGokyo(id int) error {
+	query := "delete from gokyo where id = ? "
+	_, err := s.db.Exec(query, id)
+	return err
+}
