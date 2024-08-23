@@ -13,9 +13,6 @@ Content-Type: application/json
   "difficulty": "dev"
 }
 
-
-
-
 ###Delete Gokyo By ID
 DELETE http://localhost:8080/gokyo/3
 Content-Type: application/json

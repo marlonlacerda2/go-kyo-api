@@ -58,3 +58,9 @@ func (s *GokyoService) DeleteGokyo(id int) error {
 	_, err := s.db.Exec(query, id)
 	return err
 }
+
+func (s *GokyoService) UpdateGokyo(gokyo *Gokyo) error {
+	query := "Update Gokyo set Name = ?, Serie = ? , Difficulty = ? where id = ?"
+	_, err := s.db.Exec(query, gokyo.Name, gokyo.Serie, gokyo.Difficulty, gokyo.ID)
+	return err
+}
